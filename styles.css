@@ -31,12 +31,24 @@ a:hover {
 }
 
 .topbar {
-  height:32px;
+  height: 40px;
   background-color: #483D8B;
 }
 
 .title {
   background-color: #777;
+  height: 30px;
+}
+
+button {
+  background-color: #777; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 5px; 
 }
 
 /*IMG Section*/
@@ -85,5 +97,7 @@ a:hover {
   transform: scaleX(-1);
 }
 
-
+.block {
+    position: absolute;
+}
 

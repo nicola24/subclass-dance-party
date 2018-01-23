@@ -23,8 +23,8 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
@@ -32,4 +32,19 @@ $(document).ready(function() {
 });
 
 
+// Function: left, right, up, down
+$( '#right' ).click(function() {
+  $( '.block' ).animate({ 'left': '+=50px' }, 'now' );
+});
+ 
+$( '#left' ).click(function() { 
+  $( '.block' ).animate({ 'left': '-=50px' }, 'now' );
+});
 
+$( '#up' ).click(function() {
+  $( '.block' ).animate({ 'top': '-=50px' }, 'now' );
+});
+
+$( '#down' ).click(function() {
+  $( '.block' ).animate({ 'top': '+=50px' }, 'now' );
+});
