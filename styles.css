@@ -1,58 +1,89 @@
-body, html{
+body, html {
   height:100%;
 }
-body{
+
+body {
   margin: 0px;
   background-color:#444;
   font-size: 18px;
-  /*position: fixed;*/
-  background-image: url('tower.jpg');
+}
+
+.cover {
+  background-image: url('img/background.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
-
+  opacity: 0.7;
 }
-body, a:link, a:visited, a:active{
+
+body, a:link, a:visited, a:active {
   color: lightblue;
 }
-.title, .addDancerButton, .newDancerButton{
+
+.title, .addDancerButton {
   padding:5px 12px;
   float:right;
+  text-decoration: none;
 }
 
-.topbar{
-  height:32px;
-  background-color: #555;
+a:hover {
+  font-size: 20px;
 }
-.title{
+
+.topbar {
+  height:32px;
+  background-color: #483D8B;
+}
+
+.title {
   background-color: #777;
 }
 
-.dancer{
-height: 150px;
-content: url('wine.png');
-position: fixed;
-/*border: 10px solid red;
-border-radius: 50px;*/
+/*IMG Section*/
+
+.zangief {
+  position: absolute;
+  content: url('img/zangief.gif');
 }
 
-.croissant{
-position: absolute;
-height: 150px;
-content: url('croissant.png');
+.zangief:hover {
+  height: 250px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
-.moped{
-position: absolute;
-content: url('moped.gif');
+.ryu {
+  position: absolute;
+  content: url('img/ryu.gif');
 }
 
-.fighter{
-position: absolute;
-height: 150px;
-content: url('fighter.gif');
+.ryu:hover {
+  height: 250px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
+.guile {
+  position: absolute;
+  content: url('img/guile.gif');
+}
+
+.guile:hover {
+  height: 250px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.chunli {
+  position: absolute;
+  content: url('img/chun-li.gif');
+}
+
+.chunli:hover {
+  height: 250px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
 
 
 
