@@ -34,17 +34,28 @@ $(document).ready(function() {
 
 // Function: left, right, up, down
 $( '#right' ).click(function() {
-  $( '.block' ).animate({ 'left': '+=50px' }, 'now' );
+  $( '.ryu, zangief, .guile, .chunli' ).animate({ 'left': '+=60px' }, 'fast' );
 });
  
 $( '#left' ).click(function() { 
-  $( '.block' ).animate({ 'left': '-=50px' }, 'now' );
+  $( '.ryu, zangief, .guile, .chunli' ).animate({ 'left': '-=60px' }, 'fast' );
 });
 
 $( '#up' ).click(function() {
-  $( '.block' ).animate({ 'top': '-=50px' }, 'now' );
+  $( '.ryu, zangief, .guile, .chunli' ).animate({ 'top': '-=60px' }, 'fast' );
 });
 
 $( '#down' ).click(function() {
-  $( '.block' ).animate({ 'top': '+=50px' }, 'now' );
+  $( '.ryu, zangief, .guile, .chunli' ).animate({ 'top': '+=60px' }, 'fast' );
 });
+
+// function: follow mouse
+$(document).bind('mousemove', function(e) {
+  $('.block').css({
+    left: e.pageX + 20,
+    top: e.pageY
+  });
+});
+
+
+
