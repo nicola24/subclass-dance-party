@@ -17,7 +17,7 @@ describe('blinkyDancer', function() {
     blinkyDancer.step();
     expect(blinkyDancer.$node.toggle.called).to.be.true;
   });
-
+  
   describe('dance', function() {
     it('should call step at least once per second', function() {
       sinon.spy(blinkyDancer, 'step');
@@ -31,4 +31,39 @@ describe('blinkyDancer', function() {
       expect(blinkyDancer.step.callCount).to.be.equal(2);
     });
   });
+
+
+  beforeEach(function() {
+    newDancer = new makeDancer(11, 21, timeBetweenSteps);
+  });
+
+  describe('newDancer', function() {
+    it('should call the slideDown and slideUp functions from jQuery', function() {
+      sinon.spy(newDancer, 'step');
+
+      it('should have a step function that makes its node slideUp and slideDown', function() {
+        sinon.spy(newDancer.$node, 'slideUp().slideDown()');
+        newDancer.step();
+        expect(newDancer.$node.slideUp().slideDown().called).to.be.true;
+      });
+    });
+  });
+
+
+  beforeEach(function() {
+    newDancer3 = new makeDancer(11, 21, timeBetweenSteps);
+  });
+
+  describe('newDancer3', function() {
+    it('should call step at least once per second and the slideDown function', function() {
+      sinon.spy(newDancer3, 'step');
+
+      it('should have a step function that makes its node slideUp and slideDown', function() {
+        sinon.spy(newDancer3.$node, 'slideDown()');
+        newDancer3.step();
+        expect(newDancer3.$node.slideDown().called).to.be.true;
+      });
+    });
+  });
+
 });
